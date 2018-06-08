@@ -20,7 +20,9 @@ class Questions extends Component {
     onAnswer(question, option) {
         let quiz = this.props.quiz;
         let q = quiz.questions.find(x => x.id === question.id);
-        q.options.forEach((x) => { x.selected = false; });
+        if (q.questionTypeId === 1) {
+            q.options.forEach((x) => { x.selected = false; });
+        }
         q.options.find(x => x.id === option.id).selected = true;
 
         this.props.updateQuiz(quiz);

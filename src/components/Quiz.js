@@ -70,6 +70,10 @@ class Quiz extends Component {
         }
     }
 
+    isAnswered = (question) => {
+        return question.options.find(x => x.selected) ? 'Answered' : 'Not Answered';
+    }
+
     goTo = (index) => {
         if (index >= 0 && index < this.state.pager.count) {
             this.pager.index = index;
@@ -78,8 +82,18 @@ class Quiz extends Component {
         }
     }
 
+    move = (e) => {
+        let index = parseInt(e.target.id, 10);
+        this.goTo(index);
+    }
+
     setMode = (e) => {
         let mode = e.target.id;
+        if (mode === 'submit') {
+            this.state.quiz.questions.forEach(q => {
+                q.isCorrect = q.options.every(x => x.selected === x.isAnswer);
+            });
+        }
         this.setState({ mode: mode });
     }
 
@@ -88,7 +102,8 @@ class Quiz extends Component {
             return (<Questions quiz={this.state.quiz} questions={this.state.questions} goTo={this.goTo}
                 pager={this.state.pager} move={this.move} updateQuiz={this.updateQuiz} setMode={this.setMode} />)
         } else if (this.state.mode === 'review') {
-            return (<Review quiz={this.state.quiz} questions={this.state.quiz.questions || []} goTo={this.goTo} setMode={this.setMode} />)
+            return (<Review quiz={this.state.quiz} questions={this.state.quiz.questions || []}
+                goTo={this.goTo} setMode={this.setMode} move={this.move} isAnswered={this.isAnswered} />)
         } else {
             return (<Result questions={this.state.quiz.questions || []} />)
         }

@@ -31,7 +31,7 @@ class App extends Component {
               <h3>Quiz Application</h3>
             </div>
             <div className="col-6 text-right">
-              <label>Select Quiz:</label>
+              <label className="mr-1">Select Quiz:</label>
               <select onChange={this.onChange}>
                 {this.state.quizes.map(q => <option key={q.id} value={q.id}>{q.name}</option>)}
               </select>
