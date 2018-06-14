@@ -1,39 +1,33 @@
 import React, { Component } from 'react';
+import { ActionTypes } from '../constants/actionTypes';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => ({ ...state.quiz, ...state.mode, ...state.pager });
+
+const mapDispatchToProps = dispatch => ({
+    onAnswer: payload => dispatch({ type: ActionTypes.QuizAnswer, payload })
+});
 
 class Questions extends Component {
-    state = {};
-
-    move = (e) => {
-        let id = e.target.id;
-        let index = 0;
-        if (id === 'first')
-            index = 0;
-        else if (id === 'prev')
-            index = this.props.pager.index - 1;
-        else if (id === 'next')
-            index = this.props.pager.index + 1;
-        else if (id === 'last')
-            index = this.props.pager.count - 1;
-        this.props.goTo(index);
-    }
 
     onAnswer(question, option) {
-        let quiz = this.props.quiz;
+        let quiz = JSON.parse(JSON.stringify(this.props.quiz));
         let q = quiz.questions.find(x => x.id === question.id);
         if (q.questionTypeId === 1) {
             q.options.forEach((x) => { x.selected = false; });
         }
         q.options.find(x => x.id === option.id).selected = true;
-
-        this.props.updateQuiz(quiz);
+        this.props.onAnswer(quiz);
     }
 
     render() {
+        let questions = (this.props.quiz.questions) ?
+            this.props.quiz.questions.slice(this.props.pager.index, this.props.pager.index + this.props.pager.size) : [];
         return (
             <div id="quiz">
                 <h2 className="text-center font-weight-normal">{this.props.quiz.name}</h2>
                 <hr />
-                {this.props.questions.map(q =>
+                {questions.map(q =>
                     <div key={q.id}>
                         <div className="badge badge-info">Question {this.props.pager.index + 1} of {this.props.pager.count}.</div>
                         <h3 className="font-weight-normal">{this.props.pager.index + 1}. <span>{q.name}</span></h3>
@@ -55,19 +49,14 @@ class Questions extends Component {
                 )}
                 <hr />
                 <div className="text-center">
-                    {this.props.quiz.config.allowBack && <button id="first" className="btn btn-default" onClick={this.move}>First</button>}
-                    {this.props.quiz.config.allowBack && <button id="prev" className="btn btn-default" onClick={this.move}>Prev</button>}
-                    <button id="next" className="btn btn-primary" onClick={this.move}>Next</button>
-                    <button id="last" className="btn btn-default" onClick={this.move}>Last</button>
+                    {this.props.quiz.config.allowBack && <button id="first" className="btn btn-default" onClick={this.props.move}>First</button>}
+                    {this.props.quiz.config.allowBack && <button id="prev" className="btn btn-default" onClick={this.props.move}>Prev</button>}
+                    <button id="next" className="btn btn-primary" onClick={this.props.move}>Next</button>
+                    <button id="last" className="btn btn-default" onClick={this.props.move}>Last</button>
                 </div>
-                <hr />
-                <div>
-                    <button id="review" className="btn btn-info" onClick={this.props.setMode}>Review</button>
-                    <button id="submit" className="btn btn-primary" onClick={this.props.setMode}> Submit Quiz</button >
-                </div >
             </div >
         )
     }
 }
 
-export default Questions;
+export default connect(mapStateToProps, mapDispatchToProps)(Questions);
