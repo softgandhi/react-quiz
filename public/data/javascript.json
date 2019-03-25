@@ -1,35 +1,35 @@
 {
-    "id": 4,
-    "name": "Asp.Net Quiz",
-    "description": "Asp.Net Quiz (contains webform, mvc, web API, etc.)",
+    "id": 1,
+    "name": "Javascript Quiz",
+    "description": "Javascript Quiz (contains web develepment, Javascript, ES 5/6/7, etc.)",
     "questions": [
         {
             "id": 1010,
-            "name": "ASP.NET webform separates the HTML output from program logic using a feature named as",
+            "name": "Inside which HTML element do we put the JavaScript?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Exception",
+                    "name": "javascript",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Code-behind",
-                    "isAnswer": true
+                    "name": "scripting",
+                    "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Code-front",
-                    "isAnswer": false
+                    "name": "script",
+                    "isAnswer": true
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "None of the above",
+                    "name": "js",
                     "isAnswer": false
                 }
             ],
@@ -41,25 +41,25 @@
         },
         {
             "id": 1011,
-            "name": "The feature in ASP.NET 2.0 that is used to fire a normal postback to a different page in the application is called",
+            "name": "What is the full form of SPA",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Theme",
+                    "name": "Secured and Progressive App",
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Code-front",
+                    "name": "SOLID Principles for Application",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Cross Page Posting",
+                    "name": "Single Page Application",
                     "isAnswer": true
                 },
                 {
@@ -77,31 +77,31 @@
         },
         {
             "id": 1012,
-            "name": "What class does the ASP.NET Web Form class inherit from by default?",
+            "name": "Which of these keyword is NOT used to declare a variable in Javascript?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "System.Web.UI.Page",
+                    "name": "dim",
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "System.Web.UI.Form",
+                    "name": "let",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "System.Web.GUI.Page",
+                    "name": "const",
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "System.Web.Form",
+                    "name": "var",
                     "isAnswer": false
                 }
             ],
@@ -113,25 +113,25 @@
         },
         {
             "id": 1013,
-            "name": "What does MVC stand for?",
+            "name": "What does the <noscript> tag used for?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Model View Controller",
+                    "name": "Displayed text in non-JavaScript browsers.",
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Maximum Virtual Control",
+                    "name": "Prevents Script Execution",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Microsoft Visual Core",
+                    "name": "Requests user not to run scripts",
                     "isAnswer": false
                 },
                 {
@@ -149,31 +149,31 @@
         },
         {
             "id": 1014,
-            "name": "Which of the following does NOT require type casting?",
+            "name": "How do you write \"Hello World\" in an alert box?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Session",
+                    "name": "alertBox(\"Hello World\");",
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "TempData",
+                    "name": "msgBox(\"Hello World\");",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "ViewData",
+                    "name": "display 'Hello World'",
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "ViewBag",
+                    "name": "alert('Hello World');",
                     "isAnswer": true
                 }
             ],
@@ -185,31 +185,31 @@
         },
         {
             "id": 1015,
-            "name": "Which is the correct order of Page life-cycle in asp.net webform?",
+            "name": "Which is NOT the Javascript framework/library?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Init, PreRender, Load",
+                    "name": "Angular",
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Load, PreRender, Init",
+                    "name": "Ember",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Init, Load, PreRender",
+                    "name": ".Net Core",
                     "isAnswer": true
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "None of the above",
+                    "name": "React",
                     "isAnswer": false
                 }
             ],
@@ -221,31 +221,31 @@
         },
         {
             "id": 1016,
-            "name": "Which of these data source controls do not implement caching?",
+            "name": "Which method is used to return a copy of filtered array when predicate is passed?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "ObjectDataSource",
+                    "name": "concat",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "LinqDataSource",
+                    "name": "filter",
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "SqlDataSource",
+                    "name": "search",
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "XmlDataSource",
+                    "name": "some",
                     "isAnswer": false
                 }
             ],
@@ -257,31 +257,31 @@
         },
         {
             "id": 1017,
-            "name": "Which tag asp:Label control by default renders to?",
+            "name": "Which of the following is popular server side Javascript framework mainly used to write API?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "div",
+                    "name": "Angular",
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "span",
+                    "name": "Express",
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "body",
+                    "name": "React",
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "label",
+                    "name": "Kinetic",
                     "isAnswer": false
                 }
             ],
@@ -293,31 +293,31 @@
         },
         {
             "id": 1018,
-            "name": "Which method do you use to explicitly kill a user's session?",
+            "name": "Which method is best suited to redirect to another url?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "Session.Terminate()",
+                    "name": "response.redirect",
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Session.TimeOut()",
-                    "isAnswer": false
+                    "name": "window.location",
+                    "isAnswer": true
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Session.Abondon()",
-                    "isAnswer": true
+                    "name": "url.transfer",
+                    "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "Session.Kill()",
+                    "name": "window.redirect",
                     "isAnswer": false
                 }
             ],
@@ -329,31 +329,31 @@
         },
         {
             "id": 1019,
-            "name": "Which of the following object is ideal for keeping data alive for a single request?",
+            "name": "Which method is used to execute another method in a given time interval?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "HttpContext",
+                    "name": "setTimeout()",
                     "isAnswer": true
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
-                    "name": "Session",
+                    "name": "delayMethod()",
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
-                    "name": "Cookies",
+                    "name": "evalLater()",
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
-                    "name": "SqlServer",
+                    "name": "timer()",
                     "isAnswer": false
                 }
             ],

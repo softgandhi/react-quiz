@@ -8,13 +8,20 @@
 
 .option {
     background-color: #cadaee;
+    cursor: pointer;
     font-size: 20px;
+    margin: 4px;
+}
+
+.option label {
+    cursor: pointer;
+    display: block;
     padding: 10px;
-    margin: 3px;
 }
 
 #quiz .options input[type=checkbox] {
     height: 22px;
+    margin-right: 6px;
     width: 22px;
 }
 
