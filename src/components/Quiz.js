@@ -53,7 +53,7 @@ class Quiz extends Component {
         return (
             <div>
                 {this.renderMode()}
-                {(this.props.mode != 'submit') &&
+                {(this.props.mode !== 'submit') &&
                     <div>
                         <hr />
                         <button id="quiz" className="btn btn-info" onClick={this.setMode}>Quiz</button>
